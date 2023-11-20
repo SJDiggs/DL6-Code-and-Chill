@@ -7,7 +7,7 @@ module.exports = {
     show,
 }
 
-const Pet = require('../models/pets')
+const Pet = require('../models/pet')
 
 //NEW 
 

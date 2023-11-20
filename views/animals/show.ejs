@@ -20,20 +20,18 @@
     <form id="add-adoption-form" method="POST"
       action="/pets/<%= pet._id %>/adoptions">
         <label>Name of Adopter:</label>
-        <input type="text" name="adopter">
-            
-        </input>
+        <input type="text" name="adopter"></input>
 
-        <label for="arrival">Arrival date/time:</label>
+        <label for="petDOB">Pet Birthday:</label>
         <input
             type="datetime-local"
-            id="arrival-id"
-            name="arrival-date-time"
+            id="adoption-id"
+            name="adoption-date-time"
             value="2023-11-18T19:30"
-            min="2023-11-07T00:00"
+            min="1903-11-07T00:00"
             max="2030-11-14T00:00" />
 
-        <input type="submit" value="Add Arrival">
+        <input type="submit" value="Add Adoption">
     </form>
 </section>
 
@@ -43,21 +41,21 @@
       <table>
         <thead>
           <tr>
-            <th>Airport</th>
-            <th>Arrival Date/Time</th>
+            <th>Adopter name</th>
+            <th>Pet Birthday</th>
           </tr>
         </thead>
         <tbody>
-          <% pet.adoptions.forEach(function(d) { %>
+          <% pet.adoptions.forEach(function(a) { %>
             <tr>
-              <td><%= d.airport %></td>
-              <td><%= d.arrival %></td>
+              <td><%= a.adopter %></td>
+              <td><%= d.adoptionDate %></td>
             </tr>
           <% }); %>
         </tbody>
       </table>
     <% } else { %>
-      <h5>There are no adoptions yet...</h5>
+      <h5>There are no adoptions yet :( )...</h5>
     <% } %>
   </section>
 
