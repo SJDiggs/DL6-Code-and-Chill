@@ -15,5 +15,10 @@
     "method-override": "^3.0.0",
     "mongoose": "^8.0.1",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "- Project:     - This project will track animal adoptions.  It will allow a user to enter the animals information (intake) and then update the animal information with the adopters name and date the animal was adopted.",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
 }
