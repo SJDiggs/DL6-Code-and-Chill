@@ -2,36 +2,39 @@
 
 <%- include('../partials/header') %>
 
-<h2>Enter a New Flight</h2>
-<form id="new-form" action="/flights" method="POST">
-  <label>Airline:
-    <select name="airline">
-        <option value="DELTA">DELTA</option>
-        <option value="JETBLUE">JETBLUE</option>
-        <option value="SPIRIT">SPIRIT</option>
-        <option value="VIRGIN">VIRGIN</option>
+<h2>Enter a New Pet</h2>
+<form id="new-form" action="/pets" method="POST">
+  <label>Pet Type:
+    <select name="petType">
+        <option value="CAT">CAT</option>
+        <option value="DOG">DOG</option>
+        <option value="HORSE">HORSE</option>
+        <option value="LIZARD">LIZARD</option>
+        <option value="FERRET">FERRET</option>
+        <option value="GOLDFISH">GOLDFISH</option>
+        <option value="ROCK">ROCK</option>
+
     </select>
   </label><br>
   
-  <label>Airport:
-    <select name="airport">
-      <option value="BOS">BOSTON</option>
-      <option value="DEN">DENVER</option>
-      <option value="DFW">DALLAS</option>
-      <option value="DTW">DETROIT</option>
-      <option value="LAX">LOS_ANGELES</option>
-      <option value="MHT">MANCHESTER_NH</option>
-      <option value="SAN">SAN_DIEGO</option>
+  <label>Pet Classification:
+    <select name="petClass">
+      <option value="SMALL">SMALL</option>
+      <option value="MED">MEDIUM</option>
+      <option value="LRG">LARGE</option>
+      <option value="FARM">FARM</option>
+      <option value="EXOTIC">EXOTIC</option>
+      <option value="MISC">MISCELLANEOUS</option>
     </select>
   </label><br>
-  <label>Flight Number:
-    <input type="number" name="flightNo">
+  <label>Pet Sex:
+    <input type="text" name="Pet-Sex">
   </label><br>
-  <label>Departing:
-    <input type="date" name="departs">
+  <label>Pet Age:
+    <input type="number" name="Pet-Age">
   </label><br>
   
-  <button type="submit">Add Flight</button>
+  <button type="submit">Add Pet</button>
 </form>
 
 <p><%= errorMsg %></p>

@@ -1,32 +1,28 @@
 <%- include('../partials/header') %>
 
 <section id="detail-page">
-    <div>Airline:</div>
-    <div><%= flight.airline %></div>
+    <div>Pet Type:</div>
+    <div><%= pet.petType %></div>
 
-    <div>Airport:</div>
-    <div><%= flight.airport%></div>
+    <div>Pet Classification:</div>
+    <div><%= pet.petClassification %></div>
 
-    <div>Flight Number:</div>
-    <div> <%= flight.flightNo %></div>
+    <div>Pet Sex:</div>
+    <div> <%= pet.petSex %></div>
 
-    <div>Departing:</div>
-    <div><%= flight.departs %></div>
+    <div>Pet Age:</div>
+    <div><%= pet.petAge %></div>
 </section>
 
-  <!-- Destination information Form -->
+  <!-- adoption information Form -->
 <section>
-    <br><br><h2>Add/Update Destination Information</h2>
-    <form id="add-destination-form" method="POST"
-      action="/flights/<%= flight._id %>/destinations">
-        <label>Destination Airport:</label>
-        <select name="airport">
-            <option value="AUS">AUSTIN</option>
-            <option value="DFW">DALLAS</option>
-            <option value="DEN">DENVER</option>
-            <option value="LAX">LOS ANGELES</option>
-            <option value="SAN">SAN DIEGO</option>
-        </select>
+    <br><br><h2>Add/Update Adoption Information</h2>
+    <form id="add-adoption-form" method="POST"
+      action="/pets/<%= pet._id %>/adoptions">
+        <label>Name of Adopter:</label>
+        <input type="text" name="adopter">
+            
+        </input>
 
         <label for="arrival">Arrival date/time:</label>
         <input
@@ -41,9 +37,9 @@
     </form>
 </section>
 
-<!-- Show a list of the destinations for the flight selected -->
+<!-- Show a list of the adoptions for the pet selected -->
 <section>
-    <% if (flight.destinations.length) { %>
+    <% if (pet.adoptions.length) { %>
       <table>
         <thead>
           <tr>
@@ -52,7 +48,7 @@
           </tr>
         </thead>
         <tbody>
-          <% flight.destinations.forEach(function(d) { %>
+          <% pet.adoptions.forEach(function(d) { %>
             <tr>
               <td><%= d.airport %></td>
               <td><%= d.arrival %></td>
@@ -61,7 +57,7 @@
         </tbody>
       </table>
     <% } else { %>
-      <h5>There are no destinations yet...</h5>
+      <h5>There are no adoptions yet...</h5>
     <% } %>
   </section>
 
