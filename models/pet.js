@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema
-console.log('banana')
+
 //EX1: Adoption Schema
 const adoptionSchema = new Schema ({
     adopter: {
