@@ -2,21 +2,21 @@
 
 <%- include('../partials/header') %>
 
- <h2>Flights List</h2>
+ <h2>Pet List</h2>
  <table id="list">
    <thead>
      <tr>
-       <th>Airline</th>
-       <th>Airport</th>
-       <th>Flight Number</th>
-       <th>Departure</th>
+       <th>Pet Type</th>
+       <th>Pet Classification</th>
+       <th>Pet Sex</th>
+       <th>Pet Date Of Birth</th>
      </tr>
    </thead>
    <tbody>
      <!-- Write the line of EJS to iterate over movies using forEach -->
-     <% flights.forEach( f => {  %>
+     <% pets.forEach( p => {  %>
      <tr>
-         <td><%= f.airline %></td>
+         <td><%= p.airline %></td>
          <td><%= f.airport %></td>
          <td><%= f.flightNo %></td>
          <td><%= f.departs %></td>
