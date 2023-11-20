@@ -1,0 +1,39 @@
+<!-- PATH: views/flights/new.ejs -->
+
+<%- include('../partials/header') %>
+
+<h2>Enter a New Flight</h2>
+<form id="new-form" action="/flights" method="POST">
+  <label>Airline:
+    <select name="airline">
+        <option value="DELTA">DELTA</option>
+        <option value="JETBLUE">JETBLUE</option>
+        <option value="SPIRIT">SPIRIT</option>
+        <option value="VIRGIN">VIRGIN</option>
+    </select>
+  </label><br>
+  
+  <label>Airport:
+    <select name="airport">
+      <option value="BOS">BOSTON</option>
+      <option value="DEN">DENVER</option>
+      <option value="DFW">DALLAS</option>
+      <option value="DTW">DETROIT</option>
+      <option value="LAX">LOS_ANGELES</option>
+      <option value="MHT">MANCHESTER_NH</option>
+      <option value="SAN">SAN_DIEGO</option>
+    </select>
+  </label><br>
+  <label>Flight Number:
+    <input type="number" name="flightNo">
+  </label><br>
+  <label>Departing:
+    <input type="date" name="departs">
+  </label><br>
+  
+  <button type="submit">Add Flight</button>
+</form>
+
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer') %>
